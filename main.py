@@ -1,2 +1,4 @@
 i = 3
-print i
+a = 4
+b= a+i
+print(b)
