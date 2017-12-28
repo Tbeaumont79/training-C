@@ -1,4 +1,4 @@
-import math
+from math import *
 
 def fonction():
     a = 0
@@ -6,4 +6,8 @@ def fonction():
     a = input(a)
     print("vous avez choisie valeur : "+ a )
 
-fonction()
+def racinecarre():
+    nombre = int(input("entrer un nombre : "))
+    print(ceil(sqrt(nombre)))
+    
+racinecarre()

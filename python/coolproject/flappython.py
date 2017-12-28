@@ -12,6 +12,6 @@ while not gameOver:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameOver = True
-pygame.QUIT()
+pygame.run()
 quit()
 
