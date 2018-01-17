@@ -7,3 +7,8 @@ def fct(a,b):
     value = a * b
     print(value)
 fct(3,5)
+"""another type of fonction"""
+"""in this fonction you will be able to input the argument of commentaire"""
+def strtest(*commentaire):
+    print("bonjour {}".format(input(*commentaire)),"")
+strtest()
