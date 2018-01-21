@@ -6,3 +6,4 @@ def afficher_flotant(flottant):
     a = ",".join ([partientier,partiflottante[:3]])
     print(a)
 afficher_flotant(3.666677543564567)
+
