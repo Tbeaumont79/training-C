@@ -31,7 +31,7 @@ def fonction_replace():
                 print("il te reste ",nombre_de_chance-key,"chance")
             if pick == mot_alea:
                 print("nice tu as trouver le mots ")
-                print("vous avez ",key," score")
+                print("vous avez ",nombre_de_chance-key," score")
             elif key == nombre_de_chance:
                 print("vous n'aviez que ",nombre_de_chance,"chance")
                 quit()
