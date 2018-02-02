@@ -1,3 +1,5 @@
-import pysideuic
 import os
-pysideuic.compileUiDir(os.path.dirname(convert))
+import PyQt5.uic
+PyQt5.uic.compileUiDir(Users/bod/Documents/project/coursmaison/graphique/test)
+
+
