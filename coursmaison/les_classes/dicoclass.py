@@ -8,4 +8,14 @@ class Bod:
 
        
 yolo = Bod()
-print(yolo.__dict__)
+yolo = str(yolo)
+def ecriture():
+
+    with open(yolo.name,'w') as f:
+        print("voila voila")
+def lecture():
+
+    with open(yolo.name,'r') as r:
+        print("lecture du fichier en cours : ")
+ecriture()
+lecture()
