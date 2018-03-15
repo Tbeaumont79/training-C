@@ -1,0 +1,8 @@
+Programme de gestion d'une pharmacie
+etape 1 cahier des charge : 
+- l'utilistateur doit pouvoir choisir un médicament.
+-si un médicament n'est pas disponible l'utilisateur doit pouvoir le commander
+-la pharmacie doit gerer le stocke des médicaments
+-un compte doit être associer a la pharmacie
+- une fiche client doit être associer aux client
+- le client doit pouvoir acheter des médicaments
