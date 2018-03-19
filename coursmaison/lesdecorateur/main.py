@@ -1,4 +1,4 @@
-def treufonc(test):
+df treufonc(test):
 
     
     def main():
