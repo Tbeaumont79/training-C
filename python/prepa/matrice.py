@@ -21,4 +21,3 @@ b = matriceO(6,11)
 for i in range (6):
     for j in range (11):
         b[i][j] = i-j
-print(np.array[b])

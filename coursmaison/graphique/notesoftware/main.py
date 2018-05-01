@@ -31,4 +31,3 @@ def recupererlesNote():
     
     return(notes)
 
-supprimerNote('test1')

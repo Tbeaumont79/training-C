@@ -125,7 +125,14 @@ def gauss(A0,Y0): #renvoie le vecteur colonne X tel que A0*X=Y0, on suppose qu'i
     assert m==n, "Le nombre de lignes de A et Y n'est pas le même"
     assert p==1, "Y n'est pas un vecteur"
     Y=copie_matrice(Y0)
-    # à compléter
+    for k in range (m):
+        i = indice_pivot(A,k)
+        echange_lignes(A,i,k)
+        dilatation(A,k,A[k][k])
+        for x in range(n):
+            if x! = k :
+                transvection(A,x,k,-A[x][k])
+            print(np.array(A))
 
 #Test fonction gauss
 print("\nTEST FONCTION gauss")
