@@ -68,7 +68,7 @@ def message(text):
         horloge.tick() 
     
     main()
-    
+
 def The_end(T_TEXT):
     message(T_TEXT)
 
@@ -92,9 +92,9 @@ def main():
                 gameOver = True
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    y_mouv = -5
+                    y_mouv = -7
             else:
-                y_mouv = 5
+                y_mouv = 7
         y += y_mouv
         surface.fill(blue)
         ballon(x,y,img)
@@ -120,14 +120,16 @@ def main():
             y_nuage = randint(-300,10)
         if x_nuage <= (x-nuageW) <= x_nuage + nuages_speed:
             actual_score += 1
-        
+        if actual_score < 2:
+                write("BOD corporation")
         if actual_score >= 5 and actual_score <= 10:
             nuages_speed = 10
             space_nuage = ballonH * 2
             write("STEP 2")
 
-        if actual_score >= 25:
+        if actual_score >= 15:
             space_nuage = ballonH * 1.6
+            write("ENDLESS")
 
 
             
