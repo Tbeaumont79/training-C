@@ -6,22 +6,31 @@ void ft_putchar(char c)
 }
 int		main(void)
 {
-	char tab[5];
+	char tab[16];
 	
-	tab[0] = 'h';
+	tab[0] = 'j';
 	tab[1] = 'e';
-	tab[2] = 'l';
-	tab[3] = 'l';
-	tab[4] = 'o';
-	
+	tab[2] = ' ';
+	tab[3] = 'm';
+	tab[4] = 'e';
+	tab[5] = ' ';
+	tab[6] = 'f';
+	tab[7] = 'a';
+	tab[8] = 'i';
+	tab[9] = 's';
+	tab[10]	= ' ';
+	tab[11] = 'c';
+	tab[12] = 'h';
+	tab[13] = 'i';
+	tab[14] = 'e';
+	tab[15] = 'r';
 	int i;
 	i = 0;
 while (tab[i])
 {
 
-	ft_putchar(tab[i]);
+	ft_putchar(tab[i] - 48);
 	ft_putchar('\n');
-	
 	i++;
 
 }
