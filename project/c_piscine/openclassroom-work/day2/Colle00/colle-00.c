@@ -5,10 +5,10 @@ void colle(int x, int y)
 
 	topandbottom(x,y);
 	leftandright(x,y);
+	
 	if(y > 1)
 	{
 		topandbottom(x,y);
-	
 	}
 
 }
@@ -16,13 +16,15 @@ int topandbottom(int x,int y)
 {
 
 	int i;
+
 	i = 0;
 
 	
 	if(x <= 0 && y <= 0)
 	{
-		return(0);
+		return (0);
 	}
+
 	else
 	{
 		if(x > 1)
@@ -40,7 +42,8 @@ int topandbottom(int x,int y)
 		else	
 			ft_putchar('o');
 	}
-	return(0);
+
+	return (0);
 }
 int leftandright(int x, int y)
 {
@@ -74,6 +77,6 @@ int leftandright(int x, int y)
 			i++;
 		}
 	}
-	return(0);
+	return (0);
 }
 
