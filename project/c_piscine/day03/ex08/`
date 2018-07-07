@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include<stdlib.h>
+int ft_atoi(char *str)
+{
+int i;
+int value;
+int count;
+
+i = 0;
+
+while(str[i] == ' ' || str[i] == str['\n'] || str[i] == str['\t'] ||
+str[i] == str['\r']|| str[i] == str['\f'] || str[i]  == str['\v'])
+{
+	i++;
+
+}
+while(str[i] >= '0' && str[i] <= '9')
+	{
+;
+		while (str[i] != '\0')
+		
+		{
+		
+;
+			value *=10;
+			value = str[i] - 48;		
+			
+			i++;		
+	}
+
+}
+
+	return(value);
+
+
+}
+
+
+
+
+int		main(void)
+{
+	char str[255] = "24";
+	printf("%d",ft_atoi(str));
+	printf("%d",atoi(str));
+	return(0);
+}

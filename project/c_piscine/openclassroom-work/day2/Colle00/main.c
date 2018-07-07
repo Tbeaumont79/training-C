@@ -1,7 +1,7 @@
 #include "colle-00.h"
 int		main(void)
 {
-	colle(1,1);
+	colle(40,40);
 
 	return (0);
 
