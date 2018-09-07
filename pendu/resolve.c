@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 19:59:40 by bod               #+#    #+#             */
-/*   Updated: 2018/09/07 22:18:43 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/07 23:28:31 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,34 @@ void    ft_putstr(char *str)
 
 int     ft_resolve(char c)
 {
-       char str[255] = "maison";
-       int i;
-       while (str[i] != '\0')
-       {
-            ft_putchar('*');
-            if (check(str,c))
+    char str[255] = "maison";
+    int i;
+
+    i = 0;
+    while (str[i] != '\0')
+    {
+        if (check(str,c) > 0)
+        {
+            if (str[0] == c)
+            {
+                str[0] = c;
+            }
+            while (i < check(str,c))
+            {
+                str[i] = '*';
+                i++;
+            }
+            if (i == check(str,c))
+            {
                 str[i] = c;
-            i++;
+                ft_putstr("test\n");
+                i++;
+            }
+            str[i] = '*';
         }
-       ft_putstr(str);
+        i++;
+    }
+    if (check(str,c) != 0)
+        ft_putstr(str);
     return (0);
 }
