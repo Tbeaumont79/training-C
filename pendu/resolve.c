@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 19:59:40 by bod               #+#    #+#             */
-/*   Updated: 2018/09/07 23:28:31 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/09 17:53:05 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,37 @@ void    ft_putstr(char *str)
     while (str[i] != '\0')
         ft_putchar(str[i++]);
 }
+char     *ft_strcopy(char *src, char *dest)
+{
+    int i;
+    int j;
 
+    i = 0;
+    j = 0;
+    if (src[i] == '\0')
+        return (0);
+    while (src[i] != '\0')
+    {
+        dest[j] = src[i];
+        i++;
+        j++;
+    }
+    dest[j] = '\0';
+    return (dest);
+}
 int     ft_resolve(char c)
 {
     char str[255] = "maison";
+    char *str2;
     int i;
+    int j;
 
+    j = 0;
     i = 0;
+    if (check(str, c) == 1)
+        return (0);
     while (str[i] != '\0')
     {
-        if (check(str,c) > 0)
-        {
-            if (str[0] == c)
-            {
-                str[0] = c;
-            }
             while (i < check(str,c))
             {
                 str[i] = '*';
@@ -48,14 +64,15 @@ int     ft_resolve(char c)
             if (i == check(str,c))
             {
                 str[i] = c;
-                ft_putstr("test\n");
+                printf("\033[32m OK \033[0m");
+                ft_strcopy(str,str2);
                 i++;
             }
+            if (str[i] == '\0')
+                break;
             str[i] = '*';
-        }
         i++;
     }
-    if (check(str,c) != 0)
-        ft_putstr(str);
+    ft_putstr(str2);
     return (0);
 }
