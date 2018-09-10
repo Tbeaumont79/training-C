@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 19:59:40 by bod               #+#    #+#             */
-/*   Updated: 2018/09/09 17:53:05 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/10 21:12:11 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,31 +48,32 @@ int     ft_resolve(char c)
     char str[255] = "maison";
     char *str2;
     int i;
-    int j;
 
-    j = 0;
     i = 0;
-    if (check(str, c) == 1)
-        return (0);
     while (str[i] != '\0')
     {
-            while (i < check(str,c))
-            {
-                str[i] = '*';
-                i++;
-            }
-            if (i == check(str,c))
-            {
-                str[i] = c;
-                printf("\033[32m OK \033[0m");
-                ft_strcopy(str,str2);
-                i++;
-            }
-            if (str[i] == '\0')
-                break;
+        if (check(str, c) == -1)
+        {
+            printf("\033[31m FAIL \033[0m");
+            return (0);
+        }
+        while (i < check(str,c))
+        {
             str[i] = '*';
+            i++;
+        }
+        if (i == check(str,c))
+        {
+            str[i] = c;
+            printf("\033[32m OK \033[0m");
+            i++;
+        }
+        if (str[i] == '\0')
+            break;
+        str[i] = '*';
         i++;
     }
+    ft_strcopy(str,str2);
     ft_putstr(str2);
     return (0);
 }
