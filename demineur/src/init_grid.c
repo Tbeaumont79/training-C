@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 17:56:07 by bod               #+#    #+#             */
-/*   Updated: 2018/09/14 21:34:52 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/16 20:33:27 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void    ft_putstr(char str[size][size])
     }
     printf("la valeur de i est %d et la valeur de j est: %d\n",i,j);
 }
-void    display_grid()
+void    display_grid(int x, int y)
 {
     int i;
     int j;

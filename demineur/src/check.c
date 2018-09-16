@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/11 17:33:46 by bod               #+#    #+#             */
-/*   Updated: 2018/09/16 21:28:37 by bod              ###   ########.fr       */
+/*   Created: 2018/09/15 13:04:04 by bod               #+#    #+#             */
+/*   Updated: 2018/09/16 20:40:10 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int     main(void)
+int     ft_check(int x, int y, char grid[size][size])
 {
-    int x;
-    int y;
-
-    printf("entrez une valeur pour y");
-    while ((x = getchar() != EOF))
+   if (grid[x][y] == '#')
     {
-        printf("entrez une valeur pour y");
-        break;
+        printf("Game Over !!");
+        return (0);
     }
-    display_grid(x,y);
-    return (0);
 }
-/* le but est de read les coordonées entrer pas les utilisateurs les valeur son sur une bombe il pert sinon ...
- *
- */
-
