@@ -1,29 +1,16 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/11 17:33:46 by bod               #+#    #+#             */
-/*   Updated: 2018/09/16 21:28:37 by bod              ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "ft.h"
 
-int     main(void)
+int     main(int argc, char **argv)
 {
-    int x;
-    int y;
-
-    printf("entrez une valeur pour y");
-    while ((x = getchar() != EOF))
+    if (argc > 1)
     {
-        printf("entrez une valeur pour y");
-        break;
+        //faire un atoi
+        display_grid(ft_atoi(argv[1]),ft_atoi(argv[2]));
+        return (0);
     }
-    display_grid(x,y);
+    else
+        printf("please enter a value for x and y");
     return (0);
 }
 /* le but est de read les coordonées entrer pas les utilisateurs les valeur son sur une bombe il pert sinon ...
