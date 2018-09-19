@@ -6,17 +6,25 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 13:04:04 by bod               #+#    #+#             */
-/*   Updated: 2018/09/17 22:10:53 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/20 00:06:28 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int     ft_check(int x, int y, char grid[size][size])
+int     ft_check(int x, int y, char grid[size][size],int boolean)
 {
    if (grid[x][y] == '#')
     {
         printf("Game Over !!");
         return (1);
     }
+   else
+   {
+    if (grid[x + 1][y] == '#' || grid[x][y + 1] == '#' || grid[x - 1][y] == '#')
+    {
+        return (2);
+    }
+   }
+   return (0);
 }

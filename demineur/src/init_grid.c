@@ -6,38 +6,18 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 17:56:07 by bod               #+#    #+#             */
-/*   Updated: 2018/09/17 13:10:45 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/19 20:10:36 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void    ft_putstr(char str[size][size])
-{
-    int i;
-    int j;
-
-    i = 0;
-    while (i < size)
-    {
-        j = 0;
-        while (str[i][j] != '\0' && size > j)
-        {
-            ft_putchar(str[i][j]);
-            j++;
-        }
-        i++;
-        ft_putchar('\n');
-    }
-    printf("la valeur de i est %d et la valeur de j est: %d\n",i,j);
-}
-void    display_grid(int x, int y)
+char    init_grid(char grid[size][size])
 {
     int i;
     int j;
     int count;
     char motif;
-    char grid[size][size]; 
     int  nbgen;
     int  nbgen1;
 
@@ -61,6 +41,7 @@ void    display_grid(int x, int y)
             }
             if (grid[i][j] != '#')
             {
+
                 motif = '.';
                 grid[i][j] = motif;
             }
@@ -68,5 +49,5 @@ void    display_grid(int x, int y)
         }
         i++; 
     }
-    ft_putstr(grid);
+    return (**grid);
 }

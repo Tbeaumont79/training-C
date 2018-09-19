@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/11 18:57:14 by bod               #+#    #+#             */
-/*   Updated: 2018/09/17 13:22:36 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/20 00:06:16 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <stdlib.h>
 # include <time.h>
 void    ft_putchar(char c);
-void    ft_putstr(char str[size][size]);
-void    display_grid(int x, int y);
+int     ft_check(int x, int y, char grid[size][size], int boolean);
+char    init_grid(char grid[size][size]);
+void    display_grid(char str[size][size], int boolean, char num);
 int     ft_atoi(char *str);
 # endif
