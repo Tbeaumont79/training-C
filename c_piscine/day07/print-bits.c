@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 22:09:34 by bod               #+#    #+#             */
-/*   Updated: 2018/08/08 21:16:22 by bod              ###   ########.fr       */
+/*   Updated: 2018/09/27 14:59:00 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	print_bits(unsigned char octect)
 
 int main(void)
 {
-	print_bits(145);
+	print_bits(5);
 	return (0);
 }

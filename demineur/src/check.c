@@ -6,7 +6,7 @@
 /*   By: bod <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 13:04:04 by bod               #+#    #+#             */
-/*   Updated: 2018/09/20 22:26:06 by bod              ###   ########.fr       */
+/*   Updated: 2018/10/03 20:23:17 by bod              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int     ft_check(int x, int y, char grid[size][size],int boolean)
         printf("Game Over !!\n");
         return (1);
     }
-    if (grid[x][y + 1] == '#')
+    if (grid[x][y + 1] == '#' && grid[x][y + 1] != '\0')
     {
         return (2);
     }

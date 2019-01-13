@@ -8,16 +8,21 @@ int     main()
     int boolean;
     char grid[size][size];
     char num;
-    
+
     num = 0;
     boolean = 0;
     init_grid(grid);
     while (1)
     {
+        if (x > 19 || y > 19)
+        {
+            printf("entrez une valeur correcte ! ");
+            return (0);
+        }
+
         if (ft_check(x,y,grid,boolean) == 1)
         { 
-            boolean = 1;
-            break;
+            return(0); 
         }
         if (ft_check(x,y,grid,boolean) == 2)
             boolean = 2;
@@ -28,7 +33,7 @@ int     main()
         scanf("%d",&y);
         display_grid(grid,boolean);
     }
-        display_grid(grid,boolean);
+    display_grid(grid,boolean);
     return (0);
 }
 /* le but est de read les coordonées entrer pas les utilisateurs les valeur son sur une bombe il pert sinon ...
